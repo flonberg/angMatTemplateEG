@@ -1,0 +1,18 @@
+
+
+
+
+
+
+<input (change)='setSelStr($event)'size='120' placeholder="Mysql Query String">
+<div   *ngIf = 'IonData' >
+<table  class="center">
+  <tr >
+    <th *ngFor = "let row of IonData[0] | keyvalue"> {{ row.key }} </th>
+  </tr>
+  <tr *ngFor = "let row of IonData | keyvalue" >
+    <td *ngFor ="let col of row.value | keyvalue"  > {{ col.value }}</td>
+  </tr>
+</table>
+</div>
+
